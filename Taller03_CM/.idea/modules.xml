@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Taller03_CM.iml" filepath="$PROJECT_DIR$/.idea/modules/Taller03_CM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Taller03_CM.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Taller03_CM.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Taller03_CM.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Taller03_CM.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Taller03_CM.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Taller03_CM.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Taller03_CM.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Taller03_CM.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
