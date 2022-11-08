@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.puj.taller03_cm.app-mergeDebugResources-33:/values-ldltr-v21/values-ldltr-v21.xml",
+            "outputFile": "com.puj.taller03_cm.app-mergeDebugResources-36:/values-ldltr-v21/values-ldltr-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-3\\48e56c303e0d31753f46166d8e551339\\transformed\\appcompat-1.5.1\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-3\\9b566ccc45d51d0c06f06652cb7e4de1\\transformed\\appcompat-1.5.1\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
