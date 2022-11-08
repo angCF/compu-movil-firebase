@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.puj.taller03_cm.app-mergeDebugResources-27:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.puj.taller03_cm.app-mergeDebugResources-33:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-3\\bfec8dfcaf6c34e166a516bbd7a3f400\\transformed\\material-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\Taller03CM\\Taller03_CM\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\Usuario\\AndroidStudioProjects\\Taller03CM\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
