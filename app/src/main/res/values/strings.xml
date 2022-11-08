@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Taller03_CM</string>
     <string name="snackbar_dismiss_label">cerrar</string>
+    <string name="home_label">Autenticado</string>
+    <string name="forgot_password_label">Forgot Password</string>
+    <string name="signup_label">SignUp</string>
+    <string name="login_label">Login</string>
+    <string name="password_label">Password</string>
+    <string name="email_label">Email</string>
+    <string name="signout_menu_item">SignOut</string>
 
 </resources>
