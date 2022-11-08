@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Taller03_CM</string>
+    <string name="snackbar_dismiss_label">cerrar</string>
+
 </resources>

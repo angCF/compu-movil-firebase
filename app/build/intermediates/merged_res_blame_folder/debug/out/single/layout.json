@@ -1,6 +1,10 @@
 [
     {
-        "merged": "com.puj.taller03_cm.app-mergeDebugResources-37:/layout/activity_main.xml",
-        "source": "com.puj.taller03_cm.app-main-40:/layout/activity_main.xml"
+        "merged": "com.puj.taller03_cm.app-mergeDebugResources-38:/layout/activity_basic.xml",
+        "source": "com.puj.taller03_cm.app-main-41:/layout/activity_basic.xml"
+    },
+    {
+        "merged": "com.puj.taller03_cm.app-mergeDebugResources-38:/layout/activity_main.xml",
+        "source": "com.puj.taller03_cm.app-main-41:/layout/activity_main.xml"
     }
 ]

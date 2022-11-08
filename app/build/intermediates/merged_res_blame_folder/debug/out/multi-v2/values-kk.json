@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.puj.taller03_cm.app-mergeDebugResources-36:/values-kk/values-kk.xml",
+            "outputFile": "com.puj.taller03_cm.app-mergeDebugResources-37:/values-kk/values-kk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-3\\45d524e4123b2684e95ec935268a140d\\transformed\\material-1.6.1\\res\\values-kk\\values-kk.xml",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-3\\9b566ccc45d51d0c06f06652cb7e4de1\\transformed\\appcompat-1.5.1\\res\\values-kk\\values-kk.xml",
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-3\\73f61a9bcf73c84f87a39f6f9a00bb72\\transformed\\appcompat-1.5.0\\res\\values-kk\\values-kk.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
