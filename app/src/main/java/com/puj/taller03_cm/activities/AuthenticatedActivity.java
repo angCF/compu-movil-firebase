@@ -17,6 +17,8 @@ public class AuthenticatedActivity extends BasicActivity {
 
     protected FirebaseUser currentUser;
 
+    private Boolean isSelected=false;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         ((App) getApplicationContext()).getAppComponent().inject(this);
@@ -38,6 +40,16 @@ public class AuthenticatedActivity extends BasicActivity {
                 currentUser = null;
                 startActivity(AuthenticationActivity.createIntent(this));
                 break;
+            case R.id.status:
+                if(!isSelected){
+                    item.setIcon(R.drawable.ic_baseline_online_24);
+                    isSelected=true;
+                    break;
+                }else{
+                    item.setIcon(R.drawable.ic_baseline_online_prediction_24);
+                    isSelected=false;
+                    break;
+                }
         }
         return super.onOptionsItemSelected(item);
     }
