@@ -8,10 +8,17 @@
         app:showAsAction="always"
         android:checkable="true"
         android:iconTint="@color/white_1000"/>
+
     <item
         android:id="@+id/signOutMenuButton"
         android:icon="@drawable/ic_baseline_logout_24"
         android:title="@string/signout_menu_item"
         app:showAsAction="always"
+        android:iconTint="@color/white_1000"/>
+
+    <item
+        android:id="@+id/usuariosDisponibles"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/usuarios_disponibles"
         android:iconTint="@color/white_1000"/>
 </menu>

@@ -21,6 +21,7 @@
     <string name="phone_label">Phone</string>
     <string name="number_id">Número de identificación</string>
     <string name="logout_menu_item">Lougout</string>
+    <string name="usuarios_disponibles">Usuarios Disponibles</string>
 
     <!--Cámara-->
     <string name="start_camara">Camara</string>
@@ -35,5 +36,8 @@
     <string name="latitud_opcional">Latitud (opcional)</string>
     <string name="longitud">Longitud</string>
     <string name="longitud_opcional">Longitud (opcional)</string>
+    <string name="error_identification_label">Falta N. Id</string>
+    <string name="error_last_label">Falta Apellido.</string>
+    <string name="error_name_label">Falta Nombre.</string>
 
 </resources>

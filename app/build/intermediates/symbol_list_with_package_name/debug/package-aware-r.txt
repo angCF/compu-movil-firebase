@@ -3382,6 +3382,8 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id usersList
+id usuariosDisponibles
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3500,6 +3502,7 @@ layout activity_authentication
 layout activity_basic
 layout activity_create_user
 layout activity_main
+layout activity_usuarios_disponibles
 layout amu_info_window
 layout amu_text_bubble
 layout amu_webview
@@ -3688,6 +3691,9 @@ string create_user_button_label
 string default_web_client_id
 string email_label
 string error_icon_content_description
+string error_identification_label
+string error_last_label
+string error_name_label
 string error_pass_label
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -3805,6 +3811,7 @@ string snackbar_dismiss_label
 string start_camara
 string status_bar_notification_info_overflow
 string surname_label
+string usuarios_disponibles
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

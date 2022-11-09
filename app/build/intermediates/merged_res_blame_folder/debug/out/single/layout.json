@@ -1,26 +1,30 @@
 [
     {
-        "merged": "C:\\Users\\acer\\.gradle\\daemon\\7.3.3\\com.puj.taller03_cm.app-mergeDebugResources-38:\\layout\\activity_main.xml",
-        "source": "C:\\Users\\acer\\.gradle\\daemon\\7.3.3\\com.puj.taller03_cm.app-main-41:\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-mergeDebugResources-38:\\layout\\activity_create_user.xml",
+        "source": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-main-41:\\layout\\activity_create_user.xml"
     },
     {
-        "merged": "C:\\Users\\acer\\.gradle\\daemon\\7.3.3\\com.puj.taller03_cm.app-mergeDebugResources-38:\\layout\\activity_basic.xml",
-        "source": "C:\\Users\\acer\\.gradle\\daemon\\7.3.3\\com.puj.taller03_cm.app-main-41:\\layout\\activity_basic.xml"
+        "merged": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-mergeDebugResources-38:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-main-41:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\acer\\.gradle\\daemon\\7.3.3\\com.puj.taller03_cm.app-mergeDebugResources-38:\\layout\\fragment_map.xml",
-        "source": "C:\\Users\\acer\\.gradle\\daemon\\7.3.3\\com.puj.taller03_cm.app-main-41:\\layout\\fragment_map.xml"
+        "merged": "com.puj.taller03_cm.app-mergeDebugResources-38:/layout/activity_usuarios_disponibles.xml",
+        "source": "com.puj.taller03_cm.app-main-41:/layout/activity_usuarios_disponibles.xml"
     },
     {
-        "merged": "com.puj.taller03_cm.app-mergeDebugResources-38:/layout/fragment_map.xml",
-        "source": "com.puj.taller03_cm.app-main-41:/layout/fragment_map.xml"
+        "merged": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-mergeDebugResources-38:\\layout\\fragment_map.xml",
+        "source": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-main-41:\\layout\\fragment_map.xml"
     },
     {
-        "merged": "C:\\Users\\acer\\.gradle\\daemon\\7.3.3\\com.puj.taller03_cm.app-mergeDebugResources-38:\\layout\\activity_authentication.xml",
-        "source": "C:\\Users\\acer\\.gradle\\daemon\\7.3.3\\com.puj.taller03_cm.app-main-41:\\layout\\activity_authentication.xml"
+        "merged": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-mergeDebugResources-38:\\layout\\activity_usuarios_disponibles.xml",
+        "source": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-main-41:\\layout\\activity_usuarios_disponibles.xml"
     },
     {
-        "merged": "C:\\Users\\acer\\.gradle\\daemon\\7.3.3\\com.puj.taller03_cm.app-mergeDebugResources-38:\\layout\\activity_create_user.xml",
-        "source": "C:\\Users\\acer\\.gradle\\daemon\\7.3.3\\com.puj.taller03_cm.app-main-41:\\layout\\activity_create_user.xml"
+        "merged": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-mergeDebugResources-38:\\layout\\activity_basic.xml",
+        "source": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-main-41:\\layout\\activity_basic.xml"
+    },
+    {
+        "merged": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-mergeDebugResources-38:\\layout\\activity_authentication.xml",
+        "source": "C:\\Users\\acer\\.gradle\\daemon\\7.4\\com.puj.taller03_cm.app-main-41:\\layout\\activity_authentication.xml"
     }
 ]

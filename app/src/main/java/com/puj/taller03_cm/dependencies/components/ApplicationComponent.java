@@ -7,6 +7,7 @@ import com.puj.taller03_cm.dependencies.modules.GeoInfoModule;
 import com.puj.taller03_cm.dependencies.modules.GeocoderModule;
 import com.puj.taller03_cm.dependencies.modules.LocationModule;
 import com.puj.taller03_cm.dependencies.modules.PermissionModule;
+import com.puj.taller03_cm.models.UserInfo;
 
 import javax.inject.Singleton;
 

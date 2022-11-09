@@ -298,10 +298,13 @@ id signupButton
 id status
 id textInputLayout
 id textView
+id usersList
+id usuariosDisponibles
 layout activity_authentication
 layout activity_basic
 layout activity_create_user
 layout activity_main
+layout activity_usuarios_disponibles
 layout fragment_map
 menu main_menu
 mipmap ic_launcher
@@ -317,6 +320,9 @@ string create_a_new_user
 string create_user_button_label
 string default_web_client_id
 string email_label
+string error_identification_label
+string error_last_label
+string error_name_label
 string error_pass_label
 string forgot_password_label
 string gcm_defaultSenderId
@@ -346,6 +352,7 @@ string signup_label
 string snackbar_dismiss_label
 string start_camara
 string surname_label
+string usuarios_disponibles
 style Theme.Taller03_CM
 xml backup_rules
 xml data_extraction_rules

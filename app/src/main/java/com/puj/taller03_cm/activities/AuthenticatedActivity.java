@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -50,6 +51,10 @@ public class AuthenticatedActivity extends BasicActivity {
                     isSelected=false;
                     break;
                 }
+            case R.id.usuariosDisponibles:
+                Intent intent = new Intent(this, UsuariosDisponiblesActivity.class);
+                startActivity(intent);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
