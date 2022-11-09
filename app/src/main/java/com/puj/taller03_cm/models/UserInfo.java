@@ -17,8 +17,9 @@ public class UserInfo {
     private String email;
     private String password;
     private long numeroDocumento;
-    private String latitud;
-    private String longitud;
+    private Double latitud;
+    private Double longitud;
+    private boolean disponible=true;
     //private long fechaNacimiento;
 //    private String tipoDocumento;
 //    private long phoneNumber;
@@ -28,4 +29,14 @@ public class UserInfo {
     //private long lastLogin;
 
 //    public UserInfo() {}
+
+    public UserInfo(String nombre, String apellido, String email, String password, long numeroDocumento, Double latitud, Double longitud) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.email = email;
+        this.password = password;
+        this.numeroDocumento = numeroDocumento;
+        this.latitud = latitud;
+        this.longitud = longitud;
+    }
 }

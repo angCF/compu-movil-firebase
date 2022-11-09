@@ -22,6 +22,7 @@ import com.puj.taller03_cm.R;
 import com.puj.taller03_cm.databinding.ActivityCreateUserBinding;
 import com.puj.taller03_cm.models.DatabaseRoutes;
 import com.puj.taller03_cm.models.UserInfo;
+import com.puj.taller03_cm.services.LocationService;
 
 import java.util.Date;
 import java.util.Objects;
@@ -45,26 +46,28 @@ public class CreateUserActivity extends BasicActivity {
     }
 
     private void doSignup() {
+//        String email = binding.createEmail.getEditText().getText().toString();
+//        String pass = binding.createPass.getEditText().getText().toString();
         String email = Objects.requireNonNull(binding.createEmail.getEditText()).getText().toString();
         String pass = Objects.requireNonNull(binding.createPass.getEditText()).getText().toString();
-        LocationManager locationManager = (LocationManager)
-                getSystemService(Context.LOCATION_SERVICE);
-        Criteria criteria = new Criteria();
-
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        Location location = locationManager.getLastKnownLocation(locationManager
-                .getBestProvider(criteria, false));
-        double latitude = location.getLatitude();
-        double longitud = location.getLongitude();
+//        LocationManager locationManager = (LocationManager)
+//                getSystemService(Context.LOCATION_SERVICE);
+//        Criteria criteria = new Criteria();
+//
+//        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+//            // TODO: Consider calling
+//            //    ActivityCompat#requestPermissions
+//            // here to request the missing permissions, and then overriding
+//            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+//            //                                          int[] grantResults)
+//            // to handle the case where the user grants the permission. See the documentation
+//            // for ActivityCompat#requestPermissions for more details.
+//            return;
+//        }
+//        Location location = locationManager.getLastKnownLocation(locationManager
+//                .getBestProvider(criteria, false));
+//        double latitude = location.getLatitude();
+//        double longitud = location.getLongitude();
 
         if (email.isEmpty()) {
             alertsHelper.shortSimpleSnackbar(binding.getRoot(), getString(R.string.mail_error_label));
@@ -89,8 +92,10 @@ public class CreateUserActivity extends BasicActivity {
                             binding.createEmail.getEditText().getText().toString(),
                             binding.createPass.getEditText().getText().toString(),
                             Long.parseLong(binding.numberid.getEditText().getText().toString().isEmpty()? Faker.instance().phoneNumber().cellPhone().replace("-","") : binding.numberid.getEditText().getText().toString()),
-                            binding.latitud.getEditText().getText().toString().isEmpty() ? String.valueOf(latitude) : binding.latitud.getEditText().getText().toString(),
-                            binding.longitud.getEditText().getText().toString().isEmpty() ? String.valueOf(longitud) : binding.longitud.getEditText().getText().toString()
+                            Double.parseDouble(binding.latitud.getEditText().getText().toString().isEmpty() ? String.valueOf(Double.parseDouble(binding.latitud.getEditText().getText().toString())) : binding.latitud.getEditText().getText().toString()),
+                            Double.parseDouble(binding.latitud.getEditText().getText().toString().isEmpty() ? String.valueOf(Double.parseDouble(binding.longitud.getEditText().getText().toString())) : binding.longitud.getEditText().getText().toString())
+//                            Double.parseDouble(binding.latitud.getEditText().getText().toString().isEmpty() ? String.valueOf(latitude) : binding.latitud.getEditText().getText().toString()),
+//                            Double.parseDouble(binding.longitud.getEditText().getText().toString().isEmpty() ? String.valueOf(longitud) : binding.longitud.getEditText().getText().toString())
                             //La imagen
                             );
 //                    UserInfo tmpUser = new UserInfo(

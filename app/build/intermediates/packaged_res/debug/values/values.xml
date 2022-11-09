@@ -259,8 +259,14 @@
     <color name="yellow_A400">#FFEA00</color>
     <color name="yellow_A700">#FFD600</color>
     <string name="app_name">Taller03_CM</string>
+    <string name="camera_intent">Camara</string>
+    <string name="camerax_intent">CameraX</string>
+    <string name="capture_saved">Imagen guardada correctamente.</string>
+    <string name="create_a_new_user">Create a new User</string>
+    <string name="create_user_button_label">Create User</string>
     <string name="default_web_client_id" translatable="false">459575290127-r4fnfo313dh7qeobq4k1ftssavg5n8bb.apps.googleusercontent.com</string>
     <string name="email_label">Email</string>
+    <string name="error_pass_label">El password no puede estar vacio.</string>
     <string name="forgot_password_label">Forgot Password</string>
     <string name="gcm_defaultSenderId" translatable="false">459575290127</string>
     <string name="google_api_key" translatable="false">AIzaSyDydhjrQgSV9TwdLJ1t-HAVGkGdNs_pcwA</string>
@@ -269,12 +275,26 @@
     <string name="google_storage_bucket" translatable="false">taller03-cm-67f5c.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home_label">Autenticado</string>
+    <string name="imagenDeContacto">Imagen De Contacto</string>
+    <string name="latitud">Latitud</string>
+    <string name="latitud_opcional">Latitud (opcional)</string>
     <string name="login_label">Login</string>
+    <string name="logout_menu_item">Lougout</string>
+    <string name="longitud">Longitud</string>
+    <string name="longitud_opcional">Longitud (opcional)</string>
+    <string name="mail_error_label">El email no puede estar vacio.</string>
+    <string name="name_label">Nombre</string>
+    <string name="number_id">Número de identificación</string>
     <string name="password_label">Password</string>
+    <string name="permission_denied_label">No pude obtener el permiso necesario</string>
+    <string name="phone_label">Phone</string>
     <string name="project_id" translatable="false">taller03-cm-67f5c</string>
+    <string name="seleccion_imagen">Galeria</string>
     <string name="signout_menu_item">SignOut</string>
     <string name="signup_label">SignUp</string>
     <string name="snackbar_dismiss_label">cerrar</string>
+    <string name="start_camara">Camara</string>
+    <string name="surname_label">Apellido</string>
     <style name="Theme.Taller03_CM" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>
