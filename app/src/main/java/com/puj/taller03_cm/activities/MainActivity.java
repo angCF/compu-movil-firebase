@@ -12,6 +12,7 @@ import com.google.android.gms.location.LocationResult;
 import com.puj.taller03_cm.R;
 import com.puj.taller03_cm.services.LocationService;
 import com.puj.taller03_cm.databinding.ActivityMainBinding;
+import com.puj.taller03_cm.utils.PermissionHelper;
 
 public class MainActivity extends AuthenticatedActivity {
     public static final String TAG = MainActivity.class.getName();
@@ -37,5 +38,30 @@ public class MainActivity extends AuthenticatedActivity {
                 fragment.updateUserPositionOnMap(locationResult);
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        permissionHelper.getLocationPermission(this);
+        if (permissionHelper.isMLocationPermissionGranted()) {
+            locationService.startLocation();
+        }
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        locationService.stopLocation();
+    }
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PermissionHelper.PERMISSIONS_LOCATION) {
+            permissionHelper.getLocationPermission(this);
+            if (permissionHelper.isMLocationPermissionGranted()) {
+                locationService.startLocation();
+            }
+        }
     }
 }

@@ -2805,6 +2805,8 @@ drawable ic_baseline_circle_24
 drawable ic_baseline_directions_24
 drawable ic_baseline_email_24
 drawable ic_baseline_logout_24
+drawable ic_baseline_online_24
+drawable ic_baseline_online_prediction_24
 drawable ic_baseline_password_24
 drawable ic_baseline_person_pin_24
 drawable ic_baseline_search_24
@@ -3302,6 +3304,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id status
 id stop
 id stretch
 id submenuarrow
