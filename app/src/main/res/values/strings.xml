@@ -8,5 +8,30 @@
     <string name="password_label">Password</string>
     <string name="email_label">Email</string>
     <string name="signout_menu_item">SignOut</string>
+    <string name="mail_error_label">El email no puede estar vacio.</string>
+    <string name="error_pass_label">El password no puede estar vacio.</string>
+    <string name="create_user_button_label">Create User</string>
+    <string name="name_label">Nombre</string>
+    <string name="surname_label">Apellido</string>
+    <string name="create_a_new_user">Create a new User</string>
+    <string name="imagenDeContacto">Imagen De Contacto</string>
+    <string name="phone_label">Phone</string>
+    <string name="number_id">Número de identificación</string>
+    <string name="logout_menu_item">Lougout</string>
+
+    <!--Cámara-->
+    <string name="start_camara">Camara</string>
+    <string name="seleccion_imagen">Galeria</string>
+    <string name="camera_intent">Camara</string>
+    <string name="camerax_intent">CameraX</string>
+    <string name="permission_denied_label">No pude obtener el permiso necesario</string>
+    <string name="capture_saved">Imagen guardada correctamente.</string>
+
+    <!--Mapas-->
+    <string name="latitud">Latitud</string>
+    <string name="latitud_opcional">Latitud (opcional)</string>
+    <string name="longitud">Longitud</string>
+    <string name="longitud_opcional">Longitud (opcional)</string>
+
 
 </resources>
