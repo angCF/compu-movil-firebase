@@ -8,9 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor(force = true)
 public class GeoInfo {
-    private String title;
-    private String content;
-    private String imageBase64;
-    private Double lat;
-    private Double lng;
+    private Double latitude;
+    private Double longitude;
+    private String name;
 }

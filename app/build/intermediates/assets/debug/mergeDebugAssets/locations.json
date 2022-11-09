@@ -1,5 +1,4 @@
-{
-  "locations" :[
+[
     {
         "latitude" : 4.660557,
         "longitude" : -74.090749,
@@ -26,4 +25,3 @@
         "name" : "Usaquen"
     }
   ]
-}

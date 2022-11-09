@@ -4,13 +4,20 @@ package com.puj.taller03_cm.dependencies.components;
 import com.google.errorprone.annotations.CanIgnoreReturnValue;
 import com.puj.taller03_cm.activities.BasicActivity;
 import com.puj.taller03_cm.activities.BasicActivity_MembersInjector;
+import com.puj.taller03_cm.activities.MapFragment;
+import com.puj.taller03_cm.activities.MapFragment_MembersInjector;
 import com.puj.taller03_cm.dependencies.modules.AlertsModule;
 import com.puj.taller03_cm.dependencies.modules.AlertsModule_ProvideAlertHelperFactory;
 import com.puj.taller03_cm.dependencies.modules.GeoInfoModule;
+import com.puj.taller03_cm.dependencies.modules.GeoInfoModule_ProvideGeoInfoServiceFactory;
 import com.puj.taller03_cm.dependencies.modules.GeocoderModule;
+import com.puj.taller03_cm.dependencies.modules.GeocoderModule_ProvideGeoCoderServiceFactory;
 import com.puj.taller03_cm.dependencies.modules.LocationModule;
+import com.puj.taller03_cm.dependencies.modules.LocationModule_ProvideLocationServiceFactory;
 import com.puj.taller03_cm.dependencies.modules.PermissionModule;
+import com.puj.taller03_cm.dependencies.modules.PermissionModule_ProvidePermissionHelperFactory;
 import com.puj.taller03_cm.utils.AlertsHelper;
+import com.puj.taller03_cm.utils.PermissionHelper;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.DoubleCheck;
 import dagger.internal.Preconditions;
@@ -29,12 +36,16 @@ public final class DaggerApplicationComponent {
     return new Builder();
   }
 
-  public static ApplicationComponent create() {
-    return new Builder().build();
-  }
-
   public static final class Builder {
     private AlertsModule alertsModule;
+
+    private PermissionModule permissionModule;
+
+    private GeoInfoModule geoInfoModule;
+
+    private GeocoderModule geocoderModule;
+
+    private LocationModule locationModule;
 
     private Builder() {
     }
@@ -44,39 +55,23 @@ public final class DaggerApplicationComponent {
       return this;
     }
 
-    /**
-     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
-     */
-    @Deprecated
     public Builder permissionModule(PermissionModule permissionModule) {
-      Preconditions.checkNotNull(permissionModule);
+      this.permissionModule = Preconditions.checkNotNull(permissionModule);
       return this;
     }
 
-    /**
-     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
-     */
-    @Deprecated
     public Builder geoInfoModule(GeoInfoModule geoInfoModule) {
-      Preconditions.checkNotNull(geoInfoModule);
+      this.geoInfoModule = Preconditions.checkNotNull(geoInfoModule);
       return this;
     }
 
-    /**
-     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
-     */
-    @Deprecated
     public Builder geocoderModule(GeocoderModule geocoderModule) {
-      Preconditions.checkNotNull(geocoderModule);
+      this.geocoderModule = Preconditions.checkNotNull(geocoderModule);
       return this;
     }
 
-    /**
-     * @deprecated This module is declared, but an instance is not used in the component. This method is a no-op. For more, see https://dagger.dev/unused-modules.
-     */
-    @Deprecated
     public Builder locationModule(LocationModule locationModule) {
-      Preconditions.checkNotNull(locationModule);
+      this.locationModule = Preconditions.checkNotNull(locationModule);
       return this;
     }
 
@@ -84,24 +79,45 @@ public final class DaggerApplicationComponent {
       if (alertsModule == null) {
         this.alertsModule = new AlertsModule();
       }
-      return new ApplicationComponentImpl(alertsModule);
+      if (permissionModule == null) {
+        this.permissionModule = new PermissionModule();
+      }
+      Preconditions.checkBuilderRequirement(geoInfoModule, GeoInfoModule.class);
+      Preconditions.checkBuilderRequirement(geocoderModule, GeocoderModule.class);
+      Preconditions.checkBuilderRequirement(locationModule, LocationModule.class);
+      return new ApplicationComponentImpl(alertsModule, permissionModule, geoInfoModule, geocoderModule, locationModule);
     }
   }
 
   private static final class ApplicationComponentImpl implements ApplicationComponent {
+    private final LocationModule locationModule;
+
+    private final GeoInfoModule geoInfoModule;
+
+    private final GeocoderModule geocoderModule;
+
     private final ApplicationComponentImpl applicationComponentImpl = this;
 
     private Provider<AlertsHelper> provideAlertHelperProvider;
 
-    private ApplicationComponentImpl(AlertsModule alertsModuleParam) {
+    private Provider<PermissionHelper> providePermissionHelperProvider;
 
-      initialize(alertsModuleParam);
+    private ApplicationComponentImpl(AlertsModule alertsModuleParam,
+        PermissionModule permissionModuleParam, GeoInfoModule geoInfoModuleParam,
+        GeocoderModule geocoderModuleParam, LocationModule locationModuleParam) {
+      this.locationModule = locationModuleParam;
+      this.geoInfoModule = geoInfoModuleParam;
+      this.geocoderModule = geocoderModuleParam;
+      initialize(alertsModuleParam, permissionModuleParam, geoInfoModuleParam, geocoderModuleParam, locationModuleParam);
 
     }
 
     @SuppressWarnings("unchecked")
-    private void initialize(final AlertsModule alertsModuleParam) {
+    private void initialize(final AlertsModule alertsModuleParam,
+        final PermissionModule permissionModuleParam, final GeoInfoModule geoInfoModuleParam,
+        final GeocoderModule geocoderModuleParam, final LocationModule locationModuleParam) {
       this.provideAlertHelperProvider = DoubleCheck.provider(AlertsModule_ProvideAlertHelperFactory.create(alertsModuleParam));
+      this.providePermissionHelperProvider = DoubleCheck.provider(PermissionModule_ProvidePermissionHelperFactory.create(permissionModuleParam));
     }
 
     @Override
@@ -109,9 +125,23 @@ public final class DaggerApplicationComponent {
       injectBasicActivity(activity);
     }
 
+    @Override
+    public void inject(MapFragment fragment) {
+      injectMapFragment(fragment);
+    }
+
     @CanIgnoreReturnValue
     private BasicActivity injectBasicActivity(BasicActivity instance) {
       BasicActivity_MembersInjector.injectAlertsHelper(instance, provideAlertHelperProvider.get());
+      BasicActivity_MembersInjector.injectPermissionHelper(instance, providePermissionHelperProvider.get());
+      BasicActivity_MembersInjector.injectLocationService(instance, LocationModule_ProvideLocationServiceFactory.provideLocationService(locationModule));
+      return instance;
+    }
+
+    @CanIgnoreReturnValue
+    private MapFragment injectMapFragment(MapFragment instance) {
+      MapFragment_MembersInjector.injectGeoInfoFromJsonService(instance, GeoInfoModule_ProvideGeoInfoServiceFactory.provideGeoInfoService(geoInfoModule));
+      MapFragment_MembersInjector.injectGeocoderService(instance, GeocoderModule_ProvideGeoCoderServiceFactory.provideGeoCoderService(geocoderModule));
       return instance;
     }
   }
